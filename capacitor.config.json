@@ -1,0 +1,8 @@
+{
+    "appId": "com.despotstudio.gos",
+    "appName": "gos",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "www",
+    "cordova": {}
+}

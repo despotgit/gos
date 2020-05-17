@@ -1,0 +1,8 @@
+{
+    "name": "gos",
+    "integrations": {
+        "capacitor": {},
+        "cordova": {}
+    },
+    "type": "angular"
+}
