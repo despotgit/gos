@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import io from "socket.io-client";
 import { FileUploader } from "ng2-file-upload";
+import { serverUrl } from "../../shared/constants";
 
 const URL = serverUrl + "/api/chatapp/upload-image";
 

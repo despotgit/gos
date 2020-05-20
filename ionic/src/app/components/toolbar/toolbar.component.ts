@@ -7,6 +7,7 @@ import { UsersService } from "../../services/users.service";
 import * as moment from "moment";
 import io from "socket.io-client";
 import _ from "lodash";
+import { serverUrl } from "../../shared/constants";
 
 @Component({
     selector: "app-toolbar",

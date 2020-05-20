@@ -6,6 +6,7 @@ import * as M from "materialize-css";
 import { ActivatedRoute } from "@angular/router";
 import * as moment from "moment";
 import io from "socket.io-client";
+import { serverUrl } from "../../shared/constants";
 
 @Component({
     selector: "app-view-user",

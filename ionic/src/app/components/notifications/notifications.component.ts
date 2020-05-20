@@ -3,6 +3,7 @@ import { TokenService } from "./../../services/token.service";
 import { Component, OnInit } from "@angular/core";
 import io from "socket.io-client";
 import * as moment from "moment";
+import { serverUrl } from "../../shared/constants";
 
 @Component({
     selector: "app-notifications",

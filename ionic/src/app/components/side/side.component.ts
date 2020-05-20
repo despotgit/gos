@@ -2,6 +2,7 @@ import { UsersService } from "./../../services/users.service";
 import { Component, OnInit } from "@angular/core";
 import { TokenService } from "../../services/token.service";
 import io from "socket.io-client";
+import { serverUrl } from "../../shared/constants";
 
 @Component({
     selector: "app-side",

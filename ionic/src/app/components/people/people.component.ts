@@ -4,6 +4,7 @@ import { Component, OnInit } from "@angular/core";
 import _ from "lodash";
 import io from "socket.io-client";
 import { Router } from "@angular/router";
+import { serverUrl } from "../../shared/constants";
 
 @Component({
     selector: "app-people",

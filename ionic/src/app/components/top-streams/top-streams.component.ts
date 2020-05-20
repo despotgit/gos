@@ -5,6 +5,7 @@ import { Component, OnInit } from "@angular/core";
 import * as moment from "moment";
 import io from "socket.io-client";
 import _ from "lodash";
+import { serverUrl } from "../../shared/constants";
 
 @Component({
     selector: "app-top-streams",

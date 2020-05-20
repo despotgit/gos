@@ -7,6 +7,7 @@ import * as moment from "moment";
 import io from "socket.io-client";
 import _ from "lodash";
 import * as M from "materialize-css";
+import { serverUrl } from "../../shared/constants";
 
 @Component({
     selector: "app-posts",
