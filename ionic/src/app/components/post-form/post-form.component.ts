@@ -4,7 +4,7 @@ import { Component, OnInit } from "@angular/core";
 import io from "socket.io-client";
 import { FileUploader } from "ng2-file-upload";
 
-const URL = "http://localhost:3000/api/chatapp/upload-image";
+const URL = serverUrl + "/api/chatapp/upload-image";
 
 @Component({
     selector: "app-post-form",
@@ -23,7 +23,7 @@ export class PostFormComponent implements OnInit {
     selectedFile: any;
 
     constructor(private fb: FormBuilder, private postService: PostService) {
-        this.socket = io("http://localhost:3000");
+        this.socket = io(serverUrl);
     }
 
     ngOnInit() {
@@ -48,7 +48,7 @@ export class PostFormComponent implements OnInit {
                 image: this.selectedFile
             };
         }
-        this.postService.addPost(body).subscribe((data) => {
+        this.postService.addPost(body).subscribe(data => {
             this.socket.emit("refresh", {});
             this.postForm.reset();
         });
@@ -58,10 +58,10 @@ export class PostFormComponent implements OnInit {
         const file: File = event[0];
 
         this.ReadAsBase64(file)
-            .then((result) => {
+            .then(result => {
                 this.selectedFile = result;
             })
-            .catch((err) => console.log(err));
+            .catch(err => console.log(err));
     }
 
     ReadAsBase64(file): Promise<any> {
@@ -71,7 +71,7 @@ export class PostFormComponent implements OnInit {
                 resolve(reader.result);
             });
 
-            reader.addEventListener("error", (event) => {
+            reader.addEventListener("error", event => {
                 reject(event);
             });
 
